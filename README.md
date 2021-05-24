@@ -4,7 +4,7 @@ Guys, this is a test task, and nothing more... :)
 # Quickly start
 
 ```bash
-git clone atm-on-grape
+git clone https://github.com/cmirnow/atm-on-grape.git
 cd atm-on-grape
 bundle install
 bundle exec rake db:migrate
