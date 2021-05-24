@@ -1,7 +1,7 @@
-## API ATM on Grape & Rails
+# API ATM on Grape & Rails
 Guys, this is a test task, and nothing more... :)
 
-# Quickly start
+## Quickly start
 
 ```bash
 git clone https://github.com/cmirnow/atm-on-grape.git
