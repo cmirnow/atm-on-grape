@@ -38,15 +38,9 @@ module Banknote
       #
       # subset_sum([3,9,8,4,5,7,10],15)
 
-      def counting(quantity)
-        denominations = [1, 2, 5, 10, 25, 50]
+      def counting(q)
         tmp = []
-
-        denominations.each_with_index do |d, index|
-          quantity[index].times do
-            tmp << d
-          end
-        end
+        [1, 2, 5, 10, 25, 50].map.with_index { |d, index| q[index].times { tmp << d } }
         tmp
       end
     end
@@ -67,7 +61,7 @@ module Banknote
     end
   ]).values
 
-      # reduce the number of banknotes:
+          # reduce the number of banknotes:
           BanknoteData.update({
                                 banknote1: BanknoteData.all[0][:banknote1] - given_away[0],
                                 banknote2: BanknoteData.all[0][:banknote2] - given_away[1],
