@@ -1,0 +1,2 @@
+class BanknoteData < ApplicationRecord
+end

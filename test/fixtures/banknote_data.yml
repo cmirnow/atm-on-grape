@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  banknote1: 1
+  banknote2: 1
+  banknote5: 1
+  banknote10: 1
+  banknote25: 1
+  banknote50: 1
+
+two:
+  banknote1: 1
+  banknote2: 1
+  banknote5: 1
+  banknote10: 1
+  banknote25: 1
+  banknote50: 1
