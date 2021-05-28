@@ -21,14 +21,7 @@ module Banknote
         requires :banknote50, type: Integer
       end
       put ':id' do
-        BanknoteData.find(1).update({
-                                      banknote1: params[:banknote1],
-                                      banknote2: params[:banknote2],
-                                      banknote5: params[:banknote5],
-                                      banknote10: params[:banknote10],
-                                      banknote25: params[:banknote25],
-                                      banknote50: params[:banknote50]
-                                    })
+        Calculations.update_cash(params)
       end
     end
   end

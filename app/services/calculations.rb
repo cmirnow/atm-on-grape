@@ -1,17 +1,4 @@
 class Calculations
-  def self.get_banknotes
-    BanknoteData.all.map do |value|
-      [
-        value['banknote1'],
-        value['banknote2'],
-        value['banknote5'],
-        value['banknote10'],
-        value['banknote25'],
-        value['banknote50']
-      ]
-    end
-  end
-
   def self.subset_sum(*args)
     args[0].length.downto(1).flat_map do |i|
       args[0].combination(i).to_a
@@ -24,6 +11,19 @@ class Calculations
     tmp = []
     [1, 2, 5, 10, 25, 50].map.with_index { |d, index| args[0][index].times { tmp << d } }
     tmp
+  end
+
+  def self.get_banknotes
+    BanknoteData.all.map do |value|
+      [
+        value['banknote1'],
+        value['banknote2'],
+        value['banknote5'],
+        value['banknote10'],
+        value['banknote25'],
+        value['banknote50']
+      ]
+    end
   end
 
   def self.get_money(*args)
@@ -47,5 +47,16 @@ end
     rescue StandardError
       'transaction not allowed'
     end
+  end
+
+  def self.update_cash(params)
+    BanknoteData.find(1).update({
+                                  banknote1: params[:banknote1],
+                                  banknote2: params[:banknote2],
+                                  banknote5: params[:banknote5],
+                                  banknote10: params[:banknote10],
+                                  banknote25: params[:banknote25],
+                                  banknote50: params[:banknote50]
+                                })
   end
 end
