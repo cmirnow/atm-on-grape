@@ -1,10 +1,17 @@
 class Calculations
-  def self.subset_sum(*args)
-    args[0].length.downto(1).flat_map do |i|
-      args[0].combination(i).to_a
-    end.select do |a|
-      a.inject(:+) == args[1]
+  def self.subset_sum((first, *rest), target)
+    if rest.empty?
+      return first == target ? [first] : nil
     end
+
+    rv = subset_sum(rest, target)
+    return rv unless rv.nil?
+    return nil if first > target
+
+    rv = subset_sum(rest, target - first)
+    return [first, *rv] unless rv.nil?
+
+    nil
   end
 
   def self.counting(*args)
@@ -27,7 +34,7 @@ class Calculations
   end
 
   def self.get_money(*args)
-    answer = subset_sum(counting(get_banknotes.flatten), args[0].to_i).first
+    answer = subset_sum(counting(get_banknotes.flatten), args[0].to_i)
     begin
       given_away = { 1 => 0, 2 => 0, 5 => 0, 10 => 0, 25 => 0, 50 => 0 }.merge(Hash[
 answer.group_by { |i| i }.map do |k, v|
