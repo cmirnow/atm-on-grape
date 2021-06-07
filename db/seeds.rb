@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-BanknoteData.create!(banknote1: 1, banknote2: 2, banknote5: 5, banknote10: 1, banknote25: 2, banknote50: 2)
+BanknoteAsset.create!(banknote1: 10, banknote2: 10, banknote5: 10, banknote10: 10, banknote25: 10, banknote50: 10)

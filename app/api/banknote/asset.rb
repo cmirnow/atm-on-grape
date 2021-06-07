@@ -1,9 +1,9 @@
 module Banknote
-  class Data < Grape::API
-    resource :banknote_data do
+  class Asset < Grape::API
+    resource :banknote_asset do
       desc 'list'
       get do
-        BanknoteData.all
+        BanknoteAsset.all
       end
 
       desc 'get money'

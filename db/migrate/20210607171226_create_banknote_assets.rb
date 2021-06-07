@@ -1,6 +1,6 @@
-class CreateBanknoteData < ActiveRecord::Migration[6.0]
+class CreateBanknoteAssets < ActiveRecord::Migration[6.1]
   def change
-    create_table :banknote_data do |t|
+    create_table :banknote_assets do |t|
       t.integer :banknote1
       t.integer :banknote2
       t.integer :banknote5
