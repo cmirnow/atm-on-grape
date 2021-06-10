@@ -14,9 +14,9 @@ rails s
 You can see the list of grape API routes by running:
 ```bash
 rails grape:routes
-       GET  |  /api/:version/banknote_data(.:format)      |  v1  |  list       
-     PATCH  |  /api/:version/banknote_data(.:format)      |  v1  |  get money  
-       PUT  |  /api/:version/banknote_data/:id(.:format)  |  v1  |  update cash
+       GET  |  /api/:version/banknote_asset(.:format)      |  v1  |  list       
+     PATCH  |  /api/:version/banknote_asset(.:format)      |  v1  |  get money  
+       PUT  |  /api/:version/banknote_asset/:id(.:format)  |  v1  |  update cash
 ```
 You can find out what banknotes the ATM has:
 ```
