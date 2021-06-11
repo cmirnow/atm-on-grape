@@ -1,6 +1,8 @@
 # API ATM on Grape & Rails
 Guys, this is a test task, and nothing more... :)
 
+![API ATM on Grape & Rails](https://github.com/cmirnow/atm-on-grape/blob/master/public/grape.jpg)
+
 ## Quickly start
 
 ```bash

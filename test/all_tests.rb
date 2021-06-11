@@ -6,12 +6,11 @@ class Banknote::AssetTest < ActiveSupport::TestCase
     Rails.application
   end
 
-  # it is in progress now :)
-
   test 'GET /api/v1/banknote_asset' do
     get('/api/v1/banknote_asset')
     assert last_response.ok?
     assert_equal 200, last_response.status
+    assert_equal 58, last_response.length
   end
 
   test 'Successful cash withdrawal' do
