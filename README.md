@@ -1,7 +1,7 @@
 # API ATM on Grape & Rails
 Guys, this is a test task, and nothing more... :)
 
-![API ATM on Grape & Rails](https://github.com/cmirnow/atm-on-grape/blob/master/public/grape.jpg)
+[![API ATM on Grape & Rails](https://github.com/cmirnow/atm-on-grape/blob/master/public/grape.jpg)](https://masterpro.ws/api-atm-on-grape-ruby-on-rails)
 
 ## Quickly start
 
@@ -33,3 +33,5 @@ Top up banknotes:
 curl -X PUT http://localhost:3000/api/v1/banknote_asset/1.json -d "banknote1=10&banknote2=10&banknote5=10&banknote10=10&banknote25=10&banknote50=10"
 ```
 Hope this helps. You won't get real money, but knowledge is cool. :)
+
+[Description](https://masterpro.ws/api-atm-on-grape-ruby-on-rails) (in Russian).
